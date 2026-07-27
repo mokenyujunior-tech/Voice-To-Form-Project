@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+antenv/
+.venv/
+venv/
+.python_packages/
+.env
+local.settings.json
+.DS_Store
+*.zip
+output.tar.zst
+oryx-manifest.toml

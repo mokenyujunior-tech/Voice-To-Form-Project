@@ -1,0 +1,37 @@
+# MVFHIS Flask Backend v2 — Python 3.11 on Debian Bullseye (glibc 2.31)
+# Tight pins. Do NOT loosen — transitive drift into glibc-2.33 wheels was what
+# caused the original deploy failures.
+
+# Web framework
+flask==3.0.3
+gunicorn==22.0.0
+python-dotenv==1.0.1
+
+# HTTP (pinned to Bullseye-safe versions)
+requests==2.32.3
+urllib3==1.26.20
+chardet==5.2.0
+charset-normalizer==3.3.2
+idna==3.10
+certifi==2024.8.30
+
+# Cryptography — 43.0.3 is the last glibc-2.31-compatible release
+cryptography==43.0.3
+cffi==1.17.1
+pycparser==2.22
+
+# Managed Identity auth (NEW in v2 — replaces account keys)
+azure-identity==1.19.0
+
+# Azure SDKs
+azure-cognitiveservices-speech==1.38.0
+azure-storage-blob==12.22.0
+azure-storage-queue==12.11.0
+azure-data-tables==12.5.0
+azure-core==1.31.0
+isodate==0.6.1
+typing-extensions==4.12.2
+
+# Temp PDF generation (App Service builds the rough PDF)
+reportlab==4.2.2
+pillow==10.4.0

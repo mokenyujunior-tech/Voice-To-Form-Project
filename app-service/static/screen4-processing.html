@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processing Your Form — Patient Intake</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div class="shell">
+
+  <div class="network-banner" id="network-banner"></div>
+
+  <header class="header">
+    <div class="header-icon" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+           stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
+        <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/>
+        <circle cx="20" cy="10" r="2"/>
+      </svg>
+    </div>
+    <div class="header-text">
+      <div class="header-title">Patient Intake</div>
+      <div class="header-sub">Multilingual Voice Form System</div>
+    </div>
+  </header>
+
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span>Step 3 of 4</span>
+      <span>Processing</span>
+    </div>
+    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+      <div class="progress-fill" style="width:75%"></div>
+    </div>
+  </div>
+
+  <main class="main">
+    <h1 class="screen-title">Building your form…</h1>
+
+    <div class="error-banner" id="error-banner" role="alert" aria-live="polite"></div>
+    <button class="btn btn-outline btn-sm" id="retry-btn" type="button"
+            style="display:none; margin-bottom:16px;">Try Again</button>
+
+    <div class="processing-center">
+      <div class="spinner" aria-hidden="true"></div>
+
+      <div class="stages" role="list">
+        <div class="stage-item active" role="listitem">
+          <span class="stage-dot" aria-hidden="true"></span>
+          <svg class="stage-tick" width="14" height="14" viewBox="0 0 24 24" fill="none"
+               stroke="var(--success)" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          <span>Answers received</span>
+        </div>
+        <div class="stage-item" role="listitem">
+          <span class="stage-dot" aria-hidden="true"></span>
+          <svg class="stage-tick" width="14" height="14" viewBox="0 0 24 24" fill="none"
+               stroke="var(--success)" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          <span>Filling form fields</span>
+        </div>
+        <div class="stage-item" role="listitem">
+          <span class="stage-dot" aria-hidden="true"></span>
+          <svg class="stage-tick" width="14" height="14" viewBox="0 0 24 24" fill="none"
+               stroke="var(--success)" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          <span>Generating PDF</span>
+        </div>
+        <div class="stage-item" role="listitem">
+          <span class="stage-dot" aria-hidden="true"></span>
+          <svg class="stage-tick" width="14" height="14" viewBox="0 0 24 24" fill="none"
+               stroke="var(--success)" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          <span>Almost ready</span>
+        </div>
+      </div>
+
+      <p class="processing-note" aria-live="polite">
+        This usually takes less than a minute.<br />
+        Please do not close the app.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p style="font-size:0.78rem; color:var(--muted); text-align:center; line-height:1.6;">
+      Your information is being processed securely.<br />
+      Do not close or refresh this page.
+    </p>
+  </footer>
+
+</div>
+
+<div class="modal-overlay" id="session-warning-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <div class="modal-title" id="modal-title">Are you still there?</div>
+    <p class="modal-body">
+      To protect your privacy, your session will end in 2 minutes. Tap below to stay logged in.
+    </p>
+    <button class="btn btn-primary" onclick="SESSION.stayActive()" type="button">
+      I'm still here
+    </button>
+  </div>
+</div>
+
+<script src="js/session.js"></script>
+<script src="js/screen4.js"></script>
+</body>
+</html>
