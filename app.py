@@ -171,9 +171,9 @@ def submit():
 
     # ── Enqueue for the Function App ────────────────────────
     job = {
-        'submission_id': submission_id,
-        'patient_email': patient_email,
-        'blob_path':     blob_path,          # temp-intake/{id}-temp.pdf
+        'submissionid': submission_id,
+        'patientemail': patient_email,
+        'blobpath':     blob_path,          # temp-intake/{id}-temp.pdf
         'language':      language_code,
     }
     try:

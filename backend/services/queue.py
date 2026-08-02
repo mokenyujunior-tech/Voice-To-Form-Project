@@ -11,10 +11,10 @@ Auth via Managed Identity — no keys.
 
 Message payload (JSON):
   {
-    "submission_id": "<uuid>",
-    "patient_email": "<email>",
-    "blob_path":     "temp-intake/{submission_id}-temp.pdf",
-    "language":      "<BCP-47>"
+    "submissionId": "<uuid>",
+    "patientEmail": "<email>",
+    "blobPath":     "temp-intake/{submissionId}.pdf",
+    "language":     "<BCP-47>"
   }
 """
 

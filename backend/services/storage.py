@@ -68,9 +68,9 @@ def upload_temp_pdf(submission_id: str, pdf_bytes: bytes) -> str:
     can process it. Returns the blob path the Function App will read from.
 
     The temp blob is named by submission_id so it's easy to correlate.
-    Path convention: temp-intake/{submission_id}-temp.pdf
+    Path convention: temp-intake/{submission_id}.pdf
     """
-    blob_name = f'{submission_id}-temp.pdf'
+    blob_name = f'{submission_id}.pdf'
 
     try:
         service = _blob_service(FUNC_ACCOUNT)
