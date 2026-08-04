@@ -128,3 +128,4 @@ mints a User Delegation SAS and hands the download URL to the patient.
   frontend stores the returned `patientEmail` so polling uses the same key.
 - **`/api/status` needs the email** as a query param since it's the
   PartitionKey: `/api/status/<id>?email=<email>`.
+# trigger redeploy
